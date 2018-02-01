@@ -30,6 +30,6 @@ export default {
 </script>
 <style lang="stylus" scoped>
 #app{
-    color:red;
+    color:#333;
 }
 </style>

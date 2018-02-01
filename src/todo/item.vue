@@ -8,7 +8,7 @@
         <label>
             {{todo.content}}
         </label>
-        <button class="destroy" @click="deleteTodo"></button>    
+        <button class="destroy" @click="deleteTodo">x</button>    
     </div>
 </template>
 <script>
@@ -20,14 +20,16 @@ export default {
         }
     },
     methods:{
-        deleteTodo(){
-            
+        deleteTodo(id){
+            this.$emit('del',id)
         }
     }
 }
 </script>
 <style lang="stylus" scoped>
-#app{
-    color:red;
+.destroy{
+
 }
+.completed{
+  background-color yellow; }
 </style>
